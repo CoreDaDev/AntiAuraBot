@@ -1,8 +1,8 @@
 ---
-name: AntiBot
+name: AntiAuraBot
 version: 1.0.0
 api: 3.0.0
-main: OguzhanUmutlu\AntiBot\AntiBot
+main: OguzhanUmutlu\AntiAuraBot\AntiAuraBot
 
 permissions:
   antibot.staff:

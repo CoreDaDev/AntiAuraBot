@@ -1,8 +1,11 @@
 ---
 # Teleport Types: turn, fast-teleport, back-side
-# Turn: Turns around hacker
-# Fast-teleport: Teleports random positions that normal player's cannot touch
-# Back-side: Teleports back to hacker and normal players usually will not see it
+# Turn: Turns around hacker, %100 Detect (NOT RECOMMENDED)
+# Fast-teleport: Teleports random positions that normal player's cannot touch, %90 Detect (NOT THAT MUCH RECOMMENDED)
+# Back-side: Teleports back to hacker and normal players usually will not see it, %65 Detect (RECOMMENDED)
+
+# NOTE: Some clients can bypass back-side easily.
+
 teleport:
   type: turn
   # Yaw increase (360 = 1 tour) per tick (randomized for bypasses)
