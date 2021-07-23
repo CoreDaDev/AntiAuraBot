@@ -1,0 +1,10 @@
+---
+name: AntiBot
+version: 1.0.0
+api: 3.0.0
+main: OguzhanUmutlu\AntiBot\AntiBot
+
+permissions:
+  antibot.staff:
+    default: op
+...

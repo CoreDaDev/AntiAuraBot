@@ -1,0 +1,67 @@
+---
+# Teleport Types: turn, fast-teleport, back-side
+# Turn: Turns around hacker
+# Fast-teleport: Teleports random positions that normal player's cannot touch
+# Back-side: Teleports back to hacker and normal players usually will not see it
+teleport:
+  type: turn
+  # Yaw increase (360 = 1 tour) per tick (randomized for bypasses)
+  turn-speed:
+    - 50
+    - 70
+    - 90
+    - 110
+    - 130
+    - 150
+  # How up bot should go when turning (randomized for bypasses)
+  turn-y:
+    - 1.7
+    - 1.8
+    - 1.9
+    - 2.0
+    - 2.1
+    - 2.2
+    - 2.3
+  # Range of teleportation(blocks) (randomized for bypasses)
+  teleport-range:
+    - 1.8
+    - 2.0
+    - 2.4
+    - 2.6
+    - 2.8
+    - 3.0
+  # Tick
+  teleport-speed: 3
+  # How back bot should go(blocks) (randomized for bypasses)
+  back-multiplier:
+    - 1.8
+    - 2.0
+    - 2.2
+    - 2.4
+    - 2.6
+
+# Reports
+auto-report:
+  enabled: true
+  # 10 attack per second to a player
+  warns: 10
+
+report-command:
+  enabled: true
+  name: "report"
+  description: "Reports a hacker"
+
+# When will bot de-spawn?
+despawn-seconds: 3
+
+# Punishment warnings
+warns: 5
+
+# kick, ban or command
+# Example for command:
+# punishment: /ban {player} Hacking!
+punishment: kick
+
+# For kick/ban punishments*
+reason: "You are hacking!"
+...
