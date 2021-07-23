@@ -1,7 +1,4 @@
 # AntiAuraBot
-
-
-# AntiAuraBot
 Perfect Anti Kill Aura for PocketMine-MP!
 
 # What it does?
