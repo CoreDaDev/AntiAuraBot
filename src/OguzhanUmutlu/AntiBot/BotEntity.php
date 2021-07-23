@@ -18,7 +18,7 @@ class BotEntity extends Human {
     public $fullTicks = 0;
     public function onUpdate(int $currentTick): bool {
         $this->fullTicks++;
-        if(!$this->hacker instanceof Player || $this->hacker->isClosed() || !$this->level || !$this->hacker->boundingBox || $this->fullTicks >= AntiBot::$config->getNested("de"."spawn-seconds")*20) {
+        if(!$this->hacker instanceof Player || $this->hacker->isClosed() || !$this->level || $this->fullTicks >= AntiBot::$config->getNested("de"."spawn-seconds")*20) {
             $this->flagForDespawn();
             return false;
         }
