@@ -4,10 +4,12 @@ namespace OguzhanUmutlu\AntiAuraBot;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
+use pocketmine\command\PluginIdentifiableCommand;
 use pocketmine\Player;
+use pocketmine\plugin\Plugin;
 use pocketmine\Server;
 
-class ReportCommand extends Command {
+class ReportCommand extends Command implements PluginIdentifiableCommand {
     public function __construct() {
         parent::__construct(AntiAuraBot::$config->getNested("report-command.name"), AntiAuraBot::$config->getNested("report-command.description"), null, []);
     }
@@ -36,5 +38,9 @@ class ReportCommand extends Command {
             if($p->hasPermission("anti"."bot.staff"))
                 $p->sendMessage("§e> Player " .$sender->getName()." reported ".$player->getName()."!");
         $sender->sendMessage("§a> Player reported!");
+    }
+
+    public function getPlugin(): Plugin {
+        return AntiAuraBot::$instance;
     }
 }

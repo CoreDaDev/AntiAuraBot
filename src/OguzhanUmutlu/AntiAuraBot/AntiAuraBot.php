@@ -10,7 +10,10 @@ class AntiAuraBot extends PluginBase {
     /*** @var Config */
     public static $config;
     public static $reports = [];
+    /*** @var AntiAuraBot */
+    public static $instance;
     public function onEnable() {
+        self::$instance = $this;
         $this->saveDefaultConfig();
         self::$config = $this->getConfig();
         Entity::registerEntity(BotEntity::class, true, ["AntiAuraBotEntity"]);
