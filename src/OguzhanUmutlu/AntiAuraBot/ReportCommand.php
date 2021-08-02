@@ -35,7 +35,7 @@ class ReportCommand extends Command implements PluginIdentifiableCommand {
         if(!in_array($player->getName(), AntiAuraBot::$reports))
             AntiAuraBot::$reports[$sender->getName()] = $player->getName();
         foreach(Server::getInstance()->getOnlinePlayers() as $p)
-            if($p->hasPermission("anti"."bot.staff"))
+            if($p->hasPermission("anti"."aura"."bot.staff"))
                 $p->sendMessage("§e> Player " .$sender->getName()." reported ".$player->getName()."!");
         $sender->sendMessage("§a> Player reported!");
     }
